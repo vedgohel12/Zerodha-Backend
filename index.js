@@ -22,7 +22,12 @@ if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
 
 // Middleware
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:3001"],
+  origin: [
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "https://zerodha-frontend-one-eta.vercel.app",
+    "https://zerodha-dashboard-gray.vercel.app",
+  ],
   credentials: true,
 }));
 app.use(express.json());
